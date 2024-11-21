@@ -1,0 +1,35 @@
+<div
+  class="card"
+  #card
+  [style.background-color]="model.cardBackground"
+  (mousedown)="onMouseDown($event)"
+  (touchstart)="onMouseDown($event)"
+>
+  <div class="card-header">
+    <div style="display: flex; justify-content: space-between;">
+      <span>{{ model.type }}</span>
+    <mat-icon class="edit-icon" (click)="onCardClick()">edit</mat-icon>
+    </div>
+    <select name="funcao" id="funcao" (change)="onSelect($event)">
+      <option *ngFor="let option of model.options" [value]="option" [selected]="option === model.title">
+        {{ option }}
+      </option>
+    </select>
+
+  </div>
+  <div class="card-body">
+    <div class="io-input-list">
+      <div *ngFor="let input of model.inputs" class="io-group">
+        <mat-icon class="io-icon">input</mat-icon>
+        {{ input }}
+      </div>
+
+    </div>
+    <div class="io-output-list">
+      <div *ngFor="let output of model.outputs" class="io-group">
+        {{ output }}
+        <mat-icon class="io-icon">input</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

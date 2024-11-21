@@ -1,0 +1,108 @@
+/* styles.css */
+/* Estilos para o menu lateral */
+.sidebar {
+  background-color: #333;
+  color: #fff;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  padding-top: 20px;
+  transition: margin-left 0.5s;
+  z-index: 9999;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  border-bottom: 1px solid #555;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  color: #ffc107;
+}
+
+/* Estilos para o conteúdo principal */
+.main {
+  margin-left: 0; /* Inicialmente oculto */
+  padding: 20px;
+  transition: margin-left 0.5s;
+}
+
+.content {
+  display: flex;
+}
+
+.left-side {
+  flex: 1;
+}
+
+.right-side {
+  flex: 1;
+}
+
+/* Outros estilos */
+.divider {
+  border-left: 1px solid #ccc;
+  height: 100%;
+  margin: 0 20px;
+}
+
+.toggle-menu {
+  display: flex;
+  justify-content: end;
+  margin-right: 15px;
+}
+/* Estilo para o botão de alternar o menu */
+.toggle-btn {
+  top: 10px;
+  left: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.input-form {
+  font-size: 1em;
+  width: 100%;
+  max-width: -webkit-fill-available;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.edit-group {
+  margin: 0 0 5px 0;
+}
+.edit-type {
+  font-size: 0.8em;
+}
+.edit-title {
+  font-size: 1.5em;
+  margin: 0 0 5px 0;
+}
+.btn-save {
+  padding: 5px;
+  width: 100%;
+  min-width: 190px;
+  min-height: 35px;
+  border-radius: 5px;
+  border: none;
+  background: rgba(255, 64, 129, 0.87);
+  color: #fff;
+}
+.btn-save:hover {
+  color: rgba(255, 64, 129, 0.87);
+  background-color: #fff;
+  cursor: pointer;
+}

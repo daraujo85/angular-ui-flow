@@ -1,0 +1,41 @@
+<!-- app.component.html -->
+
+<aside class="sidebar" [ngStyle]="{ 'margin-left': isSidebarOpen && currentCard ? '0' : '-200px' }">
+
+  <div class="toggle-menu">
+    <mat-icon *ngIf="!isSidebarOpen" class="toggle-btn"  (click)="toggleSidebar()">menu_close</mat-icon>
+    <mat-icon *ngIf="isSidebarOpen" class="toggle-btn"  (click)="toggleSidebar()">menu_open</mat-icon>
+  </div>
+
+  <form *ngIf="currentCard && isSidebarOpen" (ngSubmit)="onSubmit()">
+    <ul>
+      <li>
+        <div class="edit-group"><span class="edit-type">{{ currentCard.type }}</span></div>
+        <div class="edit-group"><span class="edit-title">{{ currentCard.title }}</span></div>
+      </li>
+      <li *ngFor="let key of getObjectKeys(formData)">
+        <label [for]="key">{{key}}</label>
+        <input type="text" [id]="key" [name]="key" [(ngModel)]="formData[key]" [placeholder]="key" class="input-form">
+      </li>
+      <li><button type="submit" class="btn-save">Salvar</button></li>
+    </ul>
+  </form>
+</aside>
+
+<main class="main" [ngStyle]="{ 'margin-left': isSidebarOpen ? '200px' : '0' }">
+  <div class="content">
+
+    <div class="divider" role="separator" aria-label="Divider"></div>
+    <div class="right-side">
+      <app-card [model]="componentA" (cardClicked)="handleCardClick($event)"></app-card>
+      <app-card [model]="componentB" (cardClicked)="handleCardClick($event)"></app-card>
+      <app-card [model]="componentC" (cardClicked)="handleCardClick($event)"></app-card>
+      <app-card [model]="componentD" (cardClicked)="handleCardClick($event)"></app-card>
+      <app-card [model]="componentE" (cardClicked)="handleCardClick($event)"></app-card>
+      <app-card [model]="componentF" (cardClicked)="handleCardClick($event)"></app-card>
+      <app-card [model]="componentG" (cardClicked)="handleCardClick($event)"></app-card>
+    </div>
+  </div>
+</main>
+
+<router-outlet></router-outlet>
