@@ -1,4 +1,4 @@
-# Angular UI FlowFlow
+# Angular UI Flow
 
 Este projeto tem o objetivo de mostrar como usar o conceito de componentes configuráveis através de cards que podem ser arrastados e interligados por inputs e outputs. É inspirado no NoFlo UI.
 
