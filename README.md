@@ -1,6 +1,6 @@
 # Angular UI FlowFlow
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
+Este projeto tem o objetivo de mostrar como usar o conceito de componentes configuráveis através de cards que podem ser arrastados e interligados por inputs e outputs. É inspirado no NoFlo UI.
 
 ## Development server
 
